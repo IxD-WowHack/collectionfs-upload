@@ -1,0 +1,24 @@
+<head>
+  <title>collectionfs-upload</title>
+</head>
+
+<body>
+  <h1>Welcome to Picture Uploader!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <form>
+    <input type="file" name="..." class="myFileInput">
+  </form>
+  <p>You've uploaded a picture {{counter}} times.</p>
+  <div class="imageView">
+    {{#each images}}
+      <div>
+        <img src="http://localhost:3000/{{this.url}}"/>
+      </div>
+    {{/each}}
+  </div>
+</template>
+
