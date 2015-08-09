@@ -43,7 +43,7 @@ if (Meteor.isClient) {
           Session.set('counter', Session.get('counter') + 1);
           var userId = Meteor.userId();
           var imagesURL = {
-            "profile.image": "/cfs/files/images/" + fileObj._id
+            "profile.image": "/cfs/files/wav/" + fileObj._id
           };
           Meteor.users.update(userId, {$set: imagesURL});
         }
